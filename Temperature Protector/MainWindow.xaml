@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Temperature_Protector"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="invisiblewindow" Height="850" Width="350">
+    <Grid >
+        <tb:TaskbarIcon Visibility="Visible" x:Name="taskbar" TrayLeftMouseDown="TaskbarIcon_TrayLeftMouseDown" ToolTipText="App"  />
+        <Button Content="__" x:Name="MinBut" Click="MinBut_Click" Height="43" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="-17,0,0,10" Width="171" RenderTransformOrigin="0.491,0.522"/>
+        <TextBox x:Name="temptextblock" FontSize="20" Margin="0,0,0,53"></TextBox>
+        <Button Content="__" Click="Button_Click" Height="43" VerticalAlignment="Top" Margin="0,781,-18,0" HorizontalAlignment="Right" Width="176"/>
     </Grid>
+
 </Window>
