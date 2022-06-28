@@ -19,8 +19,8 @@
 
   <ItemGroup>
     <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
+    <PackageReference Include="LibreHardwareMonitorLib" Version="0.9.0" />
     <PackageReference Include="Notification.Wpf" Version="6.1.0.5" />
-    <PackageReference Include="OpenHardwareMonitorLibCore" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>

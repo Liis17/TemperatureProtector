@@ -3,33 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using OpenHardwareMonitor.Hardware;
+using LibreHardwareMonitor.Hardware;
 
 namespace Temperature_Protector
 {
-    class Visitor : IVisitor
+    public class UpdateVisitor : IVisitor
     {
         public void VisitComputer(IComputer computer)
         {
             computer.Traverse(this);
         }
-
         public void VisitHardware(IHardware hardware)
         {
             hardware.Update();
-
-            foreach(IHardware hw in hardware.SubHardware)
-            {
-                hw.Accept(this);
-            }
+            foreach (IHardware subHardware in hardware.SubHardware) subHardware.Accept(this);
         }
-
-        public void VisitParameter(IParameter parameter)
-        {
-        }
-
-        public void VisitSensor(ISensor sensor)
-        {
-        }
+        public void VisitSensor(ISensor sensor) { }
+        public void VisitParameter(IParameter parameter) { }
     }
 }
